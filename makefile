@@ -47,3 +47,11 @@ clean_store:
 .PHONY: clean_git
 clean_git:
 	git clean -fdX
+
+
+go build -o ./bin/goctl-z ./tools/goctl/goctl.go 
+
+go build ./goctl.go  -o  ./bin/goctl-z
+
+
+go build  -o ../../bin/goctl-z ./goctl.go 

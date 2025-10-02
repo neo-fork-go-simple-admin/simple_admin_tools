@@ -4,9 +4,10 @@ go 1.20
 
 require (
 	entgo.io/ent v0.12.3
-	github.com/bxcodec/faker/v4 latest
+	github.com/bxcodec/faker/v3 v3.5.0
 	github.com/emicklei/proto v1.11.2
 	github.com/fatih/structtag v1.2.0
+	github.com/gobuffalo/packr/v2 v2.8.1
 	github.com/gookit/color v1.5.3
 	github.com/iancoleman/strcase v0.2.0
 	github.com/jedib0t/go-pretty/v6 v6.4.6
@@ -32,14 +33,20 @@ require (
 	github.com/fatih/color v1.15.0 // indirect
 	github.com/go-openapi/inflect v0.19.0 // indirect
 	github.com/go-sql-driver/mysql v1.7.0 // indirect
+	github.com/gobuffalo/logger v1.0.3 // indirect
+	github.com/gobuffalo/packd v1.0.0 // indirect
 	github.com/google/go-cmp v0.5.9 // indirect
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/hashicorp/hcl/v2 v2.16.2 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/jimsmart/schema v0.2.0 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
+	github.com/karrick/godirwalk v1.16.1 // indirect
 	github.com/kr/pretty v0.2.1 // indirect
 	github.com/logrusorgru/aurora v2.0.3+incompatible // indirect
+	github.com/markbates/errx v1.1.0 // indirect
+	github.com/markbates/oncer v1.0.0 // indirect
+	github.com/markbates/safe v1.0.1 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.18 // indirect
 	github.com/mattn/go-runewidth v0.0.13 // indirect
@@ -47,14 +54,17 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/serenize/snaker v0.0.0-20171204205717-a683aaf2d516 // indirect
+	github.com/sirupsen/logrus v1.7.0 // indirect
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/xo/terminfo v0.0.0-20210125001918-ca9a967f8778 // indirect
 	github.com/zclconf/go-cty v1.13.1 // indirect
 	go.opentelemetry.io/otel v1.14.0 // indirect
 	go.opentelemetry.io/otel/trace v1.14.0 // indirect
 	go.uber.org/automaxprocs v1.5.2 // indirect
+	golang.org/x/crypto v0.6.0 // indirect
 	golang.org/x/mod v0.10.0 // indirect
 	golang.org/x/sys v0.7.0 // indirect
+	golang.org/x/term v0.7.0 // indirect
 	golang.org/x/tools v0.8.1-0.20230428195545-5283a0178901 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
