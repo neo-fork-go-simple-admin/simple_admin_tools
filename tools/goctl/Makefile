@@ -5,16 +5,17 @@ Build_Path?="../.."
 Build_Name?="goctls-z"
 
 build:
-	go build -ldflags="-s -w" goctl.go
-	mv goctl $(Build_Path)/bin/$(Build_Name)
+	go build -ldflags="-s -w" -o goctls goctl.go
+	cp goctls $(Build_Path)/bin/$(Build_Name)
 	goctls template clean
 	goctls template init
-	$(if $(shell command -v upx), upx goctl)
+# 	$(if $(shell command -v upx), upx goctl)	
+	
 
 mac:
 	@echo ${Build_Path}
 	GOOS=darwin go build -ldflags="-s -w" -o goctls goctl.go
-	$(if $(shell command -v upx), upx goctl-darwin)
+	$(if $(shell command -v strip), strip goctls)
 	mv goctls $(Build_Path)/bin/$(Build_Name)
 
 win:
