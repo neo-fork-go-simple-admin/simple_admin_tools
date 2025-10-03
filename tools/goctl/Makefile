@@ -28,6 +28,7 @@ linux:
 	$(if $(shell command -v upx), upx goctl-linux)
 	mv goctls $(Build_Path)/bin/$(Build_Name)
 
+# make image version=1.0.0
 image:
 	docker build --rm --platform linux/amd64 -t kevinwan/goctl:$(version) .
 	docker tag kevinwan/goctl:$(version) kevinwan/goctl:latest
@@ -37,3 +38,14 @@ image:
 	docker tag kevinwan/goctl:$(version)-arm64 kevinwan/goctl:latest-arm64
 	docker push kevinwan/goctl:$(version)-arm64
 	docker push kevinwan/goctl:latest-arm64
+
+# make image_local version=1.0.0
+image_local:
+	docker build --rm --platform linux/amd64 -t kevinwan/goctl:$(version) .
+	docker tag kevinwan/goctl:$(version) kevinwan/goctl:latest
+# 	docker push kevinwan/goctl:$(version)
+# 	docker push kevinwan/goctl:latest
+	docker build --rm --platform linux/arm64 -t kevinwan/goctl:$(version)-arm64 .
+	docker tag kevinwan/goctl:$(version)-arm64 kevinwan/goctl:latest-arm64
+# 	docker push kevinwan/goctl:$(version)-arm64
+# 	docker push kevinwan/goctl:latest-arm64
