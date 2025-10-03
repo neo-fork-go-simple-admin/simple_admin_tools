@@ -4,7 +4,7 @@
 
 docker run --rm -it -v $(pwd):/app andy/goctl-z-arm64:latest goctl --version
 
-# 参数逐段解释
+# 1. 参数逐段解释
 
 ## 1. docker run
 
@@ -46,3 +46,16 @@ docker run --rm -it -v $(pwd):/app andy/goctl-z-arm64:latest goctl --version
 4. 打印出 goctl 的版本号。
    goctl --version
 5. 容器执行完就自动删除。
+
+# 可运行的软件
+
+docker run --rm -it -v $(pwd):/app andy/goctl-z-arm64:latest goctl --version
+docker run --rm -it -v $(pwd):/app andy/goctl-z-arm64:latest protoc --version
+docker run --rm -it -v $(pwd):/app andy/goctl-z-arm64:latest protoc-gen-go --version
+docker run --rm -it -v $(pwd):/app andy/goctl-z-arm64:latest protoc-gen-go-grpc --version
+
+# 查看镜像内容
+
+docker run -it --rm <image_name> sh
+
+docker run -it --rm andy/goctl-z-arm64:latest sh
