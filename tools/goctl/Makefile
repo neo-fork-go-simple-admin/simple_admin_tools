@@ -71,3 +71,11 @@ image_local_load:
 
 	docker load -i $(Build_Path)/image/$(Build_Name_Goctl)-arm64:$(version).tar
 	docker load -i $(Build_Path)/image/$(Build_Name_Goctl)-arm64:latest.tar
+
+# image_local_test:
+# 运行测试
+# 	docker run --rm -it -v $(pwd):/app andy/goctl-z-arm64:latest goctl --version
+
+
+
+
